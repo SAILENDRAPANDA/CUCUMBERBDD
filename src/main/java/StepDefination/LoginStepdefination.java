@@ -26,11 +26,11 @@ public void user_is_already_on_fb_login_page(){
 	 System.out.println(img);
  }
  
- @Then("^user enters username and password$")
- public void user_enters_username_and_password() {
-	 driver.findElement(By.xpath("//*[@name='email']")).sendKeys("7978662404");
+ @Then("^user enters \"(.*)\" and \"(.*)\"$")
+ public void user_enters_username_and_password(String usn , String psd) {
+	 driver.findElement(By.xpath("//*[@name='email']")).sendKeys(usn);
 
-	 driver.findElement(By.xpath("//*[@name='pass']")).sendKeys("7978662404");
+	 driver.findElement(By.xpath("//*[@name='pass']")).sendKeys(psd);
 
  }
  
